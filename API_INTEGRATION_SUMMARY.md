@@ -3,13 +3,13 @@
 ## ✅ API Keys Successfully Added
 
 ### 1. Financial Modeling Prep (FMP) API
-- **API Key**: `Iafpo08cdGK6T3CpJkDU7UyrtKxFBvPA`
+- **API Key**: 
 - **Status**: ✅ Active and Integrated
 - **Free Tier**: 250 API calls per day
 - **Purpose**: Real-time stock market data
 
 ### 2. Google Gemini AI API
-- **API Key**: `AIzaSyCZpuzRgXUj-efKpiLBF5tsw_pdgYbODtc`
+- **API Key**: 
 - **Status**: ✅ Active and Integrated
 - **Model**: gemini-1.5-flash (free tier)
 - **Free Tier**: 60 requests per minute
