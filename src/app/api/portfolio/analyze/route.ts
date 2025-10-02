@@ -40,7 +40,7 @@ export async function POST(request: Request) {
         peRatio: quote.pe || 25,
         sector: getSectorForSymbol(stock.symbol)
       }
-    }).filter(s => s !== null)
+    }).filter((s): s is NonNullable<typeof s> => s !== null)
 
     if (portfolioStocks.length === 0) {
       return NextResponse.json(

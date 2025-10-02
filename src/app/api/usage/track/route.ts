@@ -1,4 +1,5 @@
 import { flexprice } from "@/lib/integrations/flexprice"
+import { NextResponse } from "next/server"
 
 export async function POST(req: Request) {
   try {
@@ -12,7 +13,7 @@ export async function POST(req: Request) {
     if (result.success) {
       const usageStats = await flexprice.getUsageStats()
 
-      return Response.json({
+      return NextResponse.json({
         success: true,
         usage: usageStats.success
           ? usageStats.data
@@ -40,13 +41,13 @@ export async function POST(req: Request) {
         lastAnalysis: timestamp,
       }
 
-      return Response.json({
+      return NextResponse.json({
         success: true,
         usage: currentUsage,
       })
     }
   } catch (error) {
     console.error("Usage tracking error:", error)
-    return Response.json({ error: "Failed to track usage" }, { status: 500 })
+    return NextResponse.json({ error: "Failed to track usage" }, { status: 500 })
   }
 }

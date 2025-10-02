@@ -44,7 +44,7 @@ export class FlexpriceClient {
       return { success: true, data }
     } catch (error) {
       console.error("[v0] Flexprice tracking failed:", error)
-      return { success: false, error: error.message }
+      return { success: false, error: error instanceof Error ? error.message : 'Unknown error' }
     }
   }
 
@@ -71,7 +71,7 @@ export class FlexpriceClient {
       return { success: true, data }
     } catch (error) {
       console.error("[v0] Flexprice usage stats failed:", error)
-      return { success: false, error: error.message }
+      return { success: false, error: error instanceof Error ? error.message : 'Unknown error' }
     }
   }
 }
