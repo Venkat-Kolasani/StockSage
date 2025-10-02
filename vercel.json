@@ -2,16 +2,5 @@
   "framework": "nextjs",
   "buildCommand": "pnpm build",
   "devCommand": "pnpm dev",
-  "installCommand": "pnpm install",
-  "functions": {
-    "app/api/portfolio/analyze/route.ts": {
-      "maxDuration": 30
-    },
-    "app/api/stocks/search/route.ts": {
-      "maxDuration": 10
-    },
-    "app/api/usage/track/route.ts": {
-      "maxDuration": 10
-    }
-  }
+  "installCommand": "pnpm install"
 }
